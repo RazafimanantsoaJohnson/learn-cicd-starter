@@ -20,5 +20,5 @@ jobs:
 
       # - name: Force Failure
       #   run: (exit 1)
-      - name: Get Go version
-        run: go version
+      - name: Run local tests
+        run: go test ./...
