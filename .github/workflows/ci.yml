@@ -22,6 +22,12 @@ jobs:
       #   run: (exit 1)
       - name: Run local tests
         run: go test -cover ./...
+
+      - name: Install Gosec
+        run: go install github.com/securego/gosec/v2/cmd/gosec@latest
+
+      - name: run Gosec
+        run: gosec ./...
   
   style:
     name: Style
